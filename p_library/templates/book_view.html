@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% get_media_prefix as MEDIA_URL %}
+<h1>{{ book.title }}</h1>
+{% if book.cover %}
+    <img src="{{ MEDIA_URL }}{{book.cover}}"/>
+{% endif %}
+{% endblock %}
